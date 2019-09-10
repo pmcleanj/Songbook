@@ -1,0 +1,16 @@
+---
+layout: default
+---
+
+<h2>{{ page.Title }}</h2>
+
+{{ content }}
+
+<ul>
+  {% for post in site.posts %}
+    <li>
+    	<h4><a href="{{ post.url }}">{{ post.title }}</a></h4>
+<!--     	{{post.excerpt}} -->
+    </li>
+  {% endfor %}
+</ul>
