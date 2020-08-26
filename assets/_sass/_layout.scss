@@ -417,7 +417,9 @@ article {
 	}
 
 .ing {
-	width: 49%;
+
+	width: 49.8%;
+
 	display: float;
 	float:	left;
 	text-align: left;
@@ -427,15 +429,28 @@ article {
 	list-style-type: disc;
 	}
 
-.ing li {
-	text-align: left;
+
+.ing ul {
+	list-style-type: disc;
 	}
+
+
+li {
+	text-align: left;
+	display: list-item; 
+	margin-left: 1em;
+	margin-top: .5em;
+	}	
 	
 .dir {
-	width:	49%;
+	width:	49.8%;
+
 	text-align: left;
 	display: float;
 	float:	right;
 	height: 100%;
-	}		
-
+	}	
+	
+.listOlinks	{
+	color:	$bodyText;
+	}

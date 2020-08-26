@@ -6,17 +6,20 @@
 # 'jekyll serve'. If you change this file, please restart the server process.
 
 # Site settings
-title: The Logrus
+
+title: The Logrus Songbook
+
 owner: Pamela Mclean
 email: pamela@logrus.ca
 
 description: > # this means to ignore newlines until "baseurl:"
-  The Logrus is the nexus of chaos. All reality exists as shadows resonating from the
-  Logrus to the primal Pattern which is the nexus of all order.
-baseurl:  # the subpath of your site, e.g. /blog
+
+  All our favourite tunes from the whole spectrum of Shadows
+baseurl:  /Songbook
 lang: "en"
-url: "http://localhost:4000" # the base hostname & protocol for your site
-#url: "http://logrus.ca" # the base hostname & protocol for your site
+#url: "https://localhost:4000" # the base hostname & protocol for your site
+url: "https://logrus.ca" # the base hostname & protocol for your site
+
 twitter_username:
 github_username:
 disqus_username:
@@ -32,46 +35,16 @@ lsi: false
 excerpt_separator: <!--more-->
 
 
-# May change this later, but for now:
 collections:
-    Champions:
-        output: true
-    denizens:
-        output: true
-    HomeChurchWeb:
-        output: true
-    patterns:
-        output: true
-    RecipeBook:
-        output: true
-    Gaidhlig:
-        output: true
-    SongBook:
-        output: true
-    SundayStories:
-        output: true
-    
+   tunes:
+       output: true
+        
 defaults:
   - scope:
       path: ""
-      type: "denizens"
+      type: "tunes"
     values:
-      layout: "denizens"
-  - scope:
-      path: ""
-      type: "posts"
-    values:
-      layout: "post"
-  - scope:
-      path: ""
-      type: "categories"
-    values:
-      layout: "categories"
-  - scope:
-      path: ""
-      type: "RecipeBook"
-    values:
-      layout: "RecipeBook"
+      layout: "tune"
   - scope:
       path: ""
     values:
