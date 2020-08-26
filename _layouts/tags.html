@@ -1,0 +1,32 @@
+---
+layout: default
+---
+
+<h2>{{ page.Title }}</h2>
+
+{{ content }}
+
+<!-- create categories array-->
+{% assign categories_array = "" | split:" " %}
+
+<!--Add each unique 'my_collection' category to the array-->
+{% for recipe in site.RecipeBook %}
+    {% for tag in recipe.tags %}
+        {% assign tag_array = tag_array | push: tag | uniq %}
+    {% endfor %}
+{% endfor %}
+
+{% for each_tag in tag_array %}
+	<h5 id="{{each_tag}}">{{each_tag}}</h5>
+	{% for recipe in site.RecipeBook %}
+		{% assign has_tag = False %}
+	    {% for tag in recipe.tags %}
+	        {% if tag == each_tag %}
+	    	<li><a href="{{ recipe.url }}">{{ recipe.title }}</a></li>
+	        {% endif %}
+	    {% endfor %}
+	{% endfor %}
+{% endfor %}
+
+4444
+
